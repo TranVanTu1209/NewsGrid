@@ -1,0 +1,435 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Lato", sans-serif;
+  background-color: var(--light-color);
+  background-color: rgb(214, 211, 211);
+}
+:root {
+  --primary-color: #c72727;
+  --secondary-color: #f99500;
+  --light-color: #f2f2f2;
+  --dark-color: #333;
+  --sports-color: #f99500;
+  --ent-color: #a66bbe;
+  --tech-color: #099cff;
+  --max-width: 1100px;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+li {
+  list-style-type: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Staatliches", cursive;
+  margin-bottom: 1.55rem;
+  line-height: 1.3;
+}
+/* utility classess */
+
+.current {
+  background-color: var(--primary-color);
+}
+.text-logo {
+  color: var(--primary-color);
+  font-weight: 600;
+  line-height: 2.9;
+  font-size: 1.5rem;
+  color: #c72727;
+}
+
+.btn {
+  color: #f2f2f2;
+  background-color: var(--primary-color);
+  transition: all 0.5s ease-in-out;
+  display: inline;
+  padding: 10px 20px;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 3px;
+  border: 1px #111 solid;
+}
+.card img {
+  width: 95%;
+}
+.card {
+  /* text-align: center; */
+  padding: 15px;
+}
+.no-img {
+  background-color: var(--dark-color);
+  color: #f2f2f2;
+  transition: all 0.5s ease-in-out;
+}
+
+.no-img:hover {
+  opacity: 0.9;
+}
+.no-img a {
+  color: #f2f2f2;
+  font-weight: 500;
+}
+.category {
+  padding: 10px 18px;
+  border-radius: 20px;
+  width: fit-content;
+  margin: 10px 0;
+}
+.category-ent {
+  color: #f2f2f2;
+  background-color: var(--ent-color);
+}
+.category-sports {
+  color: #f2f2f2;
+  background-color: var(--sports-color);
+}
+.btn:hover {
+  background-color: var(--sports-color);
+}
+.category-tech {
+  color: #f2f2f2;
+  background-color: var(--tech-color);
+}
+/* navigation */
+
+#main-nav .container {
+  position: fixed;
+  overflow: hidden;
+  z-index: 2;
+  align-items: center;
+  display: grid;
+  width: 100%;
+  margin: auto;
+  background-color: #f2f2f2;
+  grid-template-columns: 7fr 3fr 3fr;
+  padding: 10px 0;
+}
+#main-nav .container .logo img {
+  position: relative;
+  width: 40px;
+}
+#main-nav .container .logo {
+  justify-self: left;
+  padding-left: 30px;
+}
+#main-nav .container .logo span {
+  position: absolute;
+  top: -5px;
+}
+#main-nav .container .social {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-self: left;
+}
+#main-nav .container ul {
+  display: flex;
+  justify-self: left;
+  grid-template-columns: repeat(2, 1fr);
+}
+#main-nav .social i {
+  color: #222;
+  margin: 0 5px;
+}
+#main-nav .container ul li a {
+  padding: 10px 20px;
+  transition: all 0.4s ease-in-out;
+}
+#main-nav .container ul li a:hover {
+  background-color: var(--secondary-color);
+  color: #f2f2f2;
+  border: 1px solid #222;
+}
+/* showcase area */
+#showcase {
+  background-color: #333;
+  width: 100%;
+  top: 65px;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+#showcase::before {
+  content: "";
+  background: url("sport.jpg");
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  opacity: 0.2;
+  background-repeat: no-repeat;
+}
+#showcase .container {
+  color: #fff;
+  width: 50%;
+  height: 60vh;
+  margin: auto;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+
+#showcase .showcase-content .showcase-header {
+  text-transform: uppercase;
+  padding-top: 15px;
+}
+#showcase .showcase-btn {
+  margin-top: 30px;
+}
+/* articles */
+#home-articles {
+  background-color: #fdfdfd;
+  width: 90%;
+  margin: auto;
+}
+#home-articles .container {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.py-2 {
+  padding-top: 2rem;
+}
+#home-articles {
+  overflow: hidden;
+  margin-top: 2.5rem;
+}
+#home-articles .container .articles-container {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+}
+#home-articles .container .articles-container .card:last-child {
+  margin-bottom: 10px;
+}
+#home-articles .container .articles-container .card p {
+  margin: 10px 0;
+}
+#home-articles .container .articles-container .card {
+  background-color: var(--dark-color);
+  color: #f1f1f1;
+}
+/* footer */
+
+.text-center {
+  text-align: center;
+  background-color: rgb(88, 87, 87);
+  width: 90%;
+  margin: auto;
+  padding: 15px;
+  font-size: 1.2rem;
+}
+.btn-secondary {
+  background-color: var(--secondary-color);
+}
+footer {
+  padding-top: 50px;
+  padding-bottom: 20px;
+  width: 100%;
+  background-color: var(--dark-color);
+  color: #fff;
+}
+footer .footer-container {
+  padding-top: 30px;
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 1.5rem;
+}
+footer .list li a {
+  color: #f2f2f2;
+}
+footer .footer-container div .text-logo {
+  color: #c72727;
+  position: relative;
+  top: -10px;
+}
+h2,
+h3 {
+  font-weight: 400;
+}
+footer .footer-container div:nth-child(2) input {
+  margin: 10px auto;
+  width: 80%;
+}
+footer .footer-container div:nth-child(2) input[type="email"] {
+  padding: 5px 0;
+}
+footer .footer-container div:nth-child(3) ul li {
+  margin-bottom: 15px;
+  border-bottom: 1px var(--ent-color) solid;
+}
+footer .footer-container div:last-child p {
+  margin-bottom: 30px;
+}
+/* about page */
+.bg-primary {
+  background-color: var(--primary-color);
+}
+.btn-dark {
+  background-color: #222;
+}
+.btn-block {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+}
+#about {
+  padding-top: 65px;
+  clear: both;
+}
+#about .container {
+  width: 80%;
+  margin: 20px auto;
+}
+#about .container .page-container {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: 3fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+#about .container .page-container article {
+  font-size: 1.2rem;
+}
+.l-heading {
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  word-spacing: 7px;
+}
+#about .container .page-container article p {
+  margin-bottom: 20px;
+  line-height: 1.7;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+#about .container .page-container aside {
+  border: 2px #099cff solid;
+  height: fit-content;
+  color: #f2f2f2;
+}
+/* article */
+.bg-secondary {
+  background-color: var(--secondary-color);
+}
+.btn-dark:hover {
+  background-color: var(--primary-color);
+}
+#article {
+  padding-top: 70px;
+}
+#article .container {
+  width: 80%;
+  margin: auto;
+}
+#article .container .page-container {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: 3fr 1fr;
+}
+#article .container .page-container p {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+#article .container .page-container .card:first-child {
+  grid-row: 1 / span 2;
+}
+#article .container .page-container .card:last-child {
+  height: fit-content;
+}
+#article .container .page-container .categories {
+  padding-top: 10px;
+}
+#article .container ul li {
+  margin-bottom: 20px;
+  border-bottom: 1px var(--ent-color) solid;
+}
+/* media query */
+/* navigation */
+@media (max-width: 968px) {
+   #about .container .page-container {
+    grid-template-columns: 1fr;
+  }
+    #about .container .page-container {
+    grid-template-columns: 1fr;
+  }
+  #article .container .page-container .card:first-child {
+    grid-row: 1;
+  }
+ #article .container .page-container {
+   grid-template-columns: repeat(1, 1fr);
+ }
+ #article .container .page-container .card:last-child {
+  margin-top: 10px;
+}
+}
+@media (max-width: 600px) {
+  #main-nav .container .social {
+    display: none;
+  }
+  #main-nav .container {
+    grid-gap: 1rem;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #main-nav .container .logo {
+    justify-self: left;
+    padding-left: 30%;
+  }
+  #main-nav .container ul {
+    padding-left: 15%;
+  }
+  #showcase {
+    font-size: smaller;
+  }
+  #showcase .container {
+    width: 70%;
+  }
+  #showcase .showcase-content p {
+    margin-top: -10px;
+    line-height: 1.4;
+  }
+  #showcase .showcase-content .showcase-header {
+    font-size: 1.2rem;
+  }
+  #article
+  #home-articles .container .articles-container .card {
+    border-bottom: 1px solid #111;
+  }
+  footer {
+    background-color: #222;
+    width: 100vw;
+  }
+  footer .footer-container div {
+    border-bottom: 1px #111 solid;
+    padding-bottom: 20px;
+  }
+  footer .footer-container {
+    width: 80%;
+    overflow: hidden;
+  }
+ 
+
+}
+@media (max-height : 500px) {
+  #showcase .container {
+    height: 90vh;
+    font-size: 1rem;
+  }
+  #showcase .container p{
+    margin-top: -10px;
+  }
+}
