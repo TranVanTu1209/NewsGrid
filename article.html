@@ -9,7 +9,6 @@
   <link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" media="screen and ( max-width : 650px)" href="mobile.css" />
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 
   <title>News Grid | Article Page</title>
@@ -117,8 +116,8 @@
       <div>
         <h3>News Letter</h3>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia, vero. </p>
-        <form action="">
-          <input type="email" name="" placeholder="Enter email" id="">
+        <form name="contact" method="POST" data-netlify="true">
+          <input type="email" name="email" placeholder="Enter email" id="">
           <input type="submit" value="Subscribe" class="btn btn-primary">
         </form>
       </div>
