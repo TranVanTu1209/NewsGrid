@@ -278,33 +278,32 @@ footer .flex {
   display: flex;
   font-size: 0.9rem;
 }
-footer .flex  .box {
+footer .flex .box {
   width: 25%;
 }
-footer .flex  .box li a{
+footer .flex .box li a {
   color: #fff;
 }
-footer .flex  .box li {
-    margin-bottom: 10px;
+footer .flex .box li {
+  margin-bottom: 10px;
 }
-footer .flex  .box:first-child .text-logo {
+footer .flex .box:first-child .text-logo {
   position: relative;
   bottom: 12px;
 }
-footer .flex  .box:nth-child(2) input{
+footer .flex .box:nth-child(2) input {
   width: 90%;
   padding: 7px;
-  margin-top: 10px; 
- 
+  margin-top: 10px;
 }
-footer .flex  .box:nth-child(3) {
+footer .flex .box:nth-child(3) {
   padding-left: 30px;
-} 
-footer .flex  .box:last-child a {
+}
+footer .flex .box:last-child a {
   display: inline-block;
   margin-top: 20px;
 }
-footer .footer-bottom { 
+footer .footer-bottom {
   background-color: #999;
   margin: 15px auto;
   width: 100%;
@@ -415,7 +414,6 @@ footer .footer-bottom {
   footer .footer-container div:nth-child(4) {
     margin-bottom: 30px;
   }
-
 }
 
 @media (max-width: 500px) {
@@ -468,11 +466,14 @@ footer .footer-bottom {
     border-bottom: 1px #111 solid;
     padding-bottom: 20px;
   }
-  footer .flex{
+  footer .flex {
     flex-direction: column;
   }
-   footer .flex .box {
-     width: 100%;
-     margin-bottom: 30px;
-   }
+  footer .flex .box {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  footer .flex .box:nth-child(3) {
+    padding-left: 0;
+  }
 }
